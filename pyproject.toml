@@ -1,24 +1,20 @@
-[project]
-name = "your_package_name"           # Must be unique on PyPI
-version = "0.1.0"
-description = "A short summary of what your package does"
-readme = "README.md"
-requires-python = ">=3.8"
-license = { text = "MIT" }
-
-authors = [
-  { name = "Your Name", email = "you@example.com" }
-]
-
-dependencies = [
-  # e.g., "numpy >= 1.22", "requests"
-]
-
-[project.urls]
-"Homepage" = "https://github.com/yourusername/your-repo"
-"Bug Tracker" = "https://github.com/yourusername/your-repo/issues"
-
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "gym4real"
+version = "0.1.0"
+description = "Gymnasium environments for real-world reinforcement learning"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+
+[project.urls]
+Homepage = "https://github.com/Daveonwave/gym4ReaL"
+
+[tool.setuptools.packages.find]
+include = ["gym4real*"]
+
+[tool.setuptools.package-data]
+gym4real = ["envs/dam/*.yaml", "data/dam/**/*.csv", "data/dam/*.json"]
